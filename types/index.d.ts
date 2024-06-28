@@ -22,6 +22,7 @@ export interface PrintDirectOptions {
 export interface PrintFileOptions {
     filename: string;
     printer?: string | undefined;
+    options?: { [key: string]: string } | undefined;
     success?: PrintOnSuccessFunction | undefined;
     error?: PrintOnErrorFunction | undefined;
 }
@@ -54,3 +55,5 @@ export interface JobDetails {
 }
 
 export type JobStatus = 'PAUSED' | 'PRINTING' | 'PRINTED' | 'CANCELLED' | 'PENDING' | 'ABORTED';
+
+declare module '@grandchef/node-printer';

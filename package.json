@@ -1,70 +1,62 @@
 {
   "name": "@grandchef/node-printer",
   "description": "Node.js printer bindings",
-  "version": "0.7.1",
-  "main": "./lib/printer",
-  "exports": {
-    ".": "./lib/printer.js",
-    "./build": "./build.js"
-  },
-  "scripts": {
-    "apply-patches": "patch-package",
-    "install": "prebuild-install || node-gyp rebuild",
-    "prebuild": "prebuild",
-    "rebuild": "node-gyp rebuild",
-    "test": "nodeunit test"
-  },
-  "dependencies": {
-    "@mapbox/node-pre-gyp": "^1.0.9",
-    "nan": "^2.15.0",
-    "prebuild-install": "^7.0.1"
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^11.0.0",
-    "@commitlint/config-conventional": "^11.0.0",
-    "eslint": "^7.11.0",
-    "eslint-config-egg": "^8.1.2",
-    "husky": "^4.3.0",
-    "lint-staged": "^10.4.2",
-    "node-abi": "^3.8.0",
-    "nodeunit": "*",
-    "patch-package": "^6.4.7",
-    "prebuild": "^11.0.4",
-    "prebuild-ci": "^4.0.0"
-  },
-  "engines": {
-    "node": ">= 4.0.0"
-  },
-  "binary": {
-    "module_name": "node_printer",
-    "module_path": "./lib/binding",
-    "host": "https://github.com/grandchef/node-printer/releases/download/",
-    "remote_path": "v{version}"
-  },
-  "directories": {
-    "example": "examples",
-    "lib": "lib",
-    "test": "test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/grandchef/node-printer.git"
-  },
+  "version": "0.8.0",
+  "homepage": "https://github.com/grandchef/node-printer",
   "keywords": [
     "native",
     "node",
     "printer"
   ],
-  "types": "types/index.d.ts",
   "author": {
     "name": "Ion Lupascu",
     "url": "http://program-support.co.uk/",
     "email": "ionlupascu@gmail.com"
   },
   "contributors": [
+    "Timo Kunze <tkunze@compeso.com",
     "Thiago Lugli <thiagoelg@gmail.com>",
     "Eko Eryanto <ekoeryanto@gmail.com>",
     "Francimar Alves <mazinsw@gmail.com>"
   ],
-  "license": "MIT"
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/grandchef/node-printer.git"
+  },
+  "engines": {
+    "node": ">= 18.0.0"
+  },
+  "scripts": {
+    "install": "prebuild-install || node-gyp rebuild",
+    "apply-patches": "patch-package",
+    "prebuild-all": "prebuild --all --force --strip --verbose --openssl_fips=X",
+    "prebuild": "prebuild",
+    "rebuild": "node-gyp rebuild"
+  },
+  "binary": {
+    "module_name": "node_printer",
+    "module_path": "./lib/",
+    "host": "https://github.com/grandchef/node-printer/releases/download/",
+    "remote_path": "v{version}"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    },
+    {
+      "type": "BSD"
+    }
+  ],
+  "main": "./lib/printer",
+  "types": "types/index.d.ts",
+  "devDependencies": {
+    "node-gyp": "^10.1.0",
+    "prebuild": "^13.0.1",
+    "node-abi": "^3.63.0",
+    "patch-package": "^8.0.0"
+  },
+  "dependencies": {
+    "nan": "^2.19.0",
+    "prebuild-install": "^7.1.2"
+  }
 }

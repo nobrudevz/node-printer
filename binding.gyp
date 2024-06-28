@@ -1,7 +1,8 @@
 {
   "variables": {
     "module_name%": "node_printer",
-    "module_path%": "lib/binding"
+    "module_path%": "lib",
+    "openssl_fips": ""
   },
   'targets': [
     {
@@ -56,15 +57,33 @@
             ]
           }
         }],
+        ['OS=="win"', {
+          "defines": [
+            "NOMINMAX" # allow std::min/max to work
+          ],
+          "cflags": [
+            "-O2"
+          ],
+          "msvs_settings": {
+            "VCCLCompilerTool": {
+              "AdditionalOptions": [ "-std:c++17", ],
+            },
+          },
+        }],
         ['OS=="mac"', {
           'cflags':[
             "-stdlib=libc++"
           ],
           'xcode_settings': {
-            "OTHER_CPLUSPLUSFLAGS":["-std=c++14", "-stdlib=libc++"],
+            "OTHER_CPLUSPLUSFLAGS":["-std=c++17", "-stdlib=libc++"],
             "OTHER_LDFLAGS": ["-stdlib=libc++"],
-            "MACOSX_DEPLOYMENT_TARGET": "10.7",
+            "MACOSX_DEPLOYMENT_TARGET": "14.0",
           },
+        }],
+        ['OS=="linux"', {
+          'cflags_cc':[
+            "-std=c++17"
+          ]
         }],
       ]
     }
