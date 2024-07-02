@@ -9,7 +9,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [windows-latest, windows-2019, macos-latest, macos-latest-large, ubuntu-latest]
+        os: [windows-latest, windows-2019, macos-latest, ubuntu-latest]
     timeout-minutes: 30
     steps:
       - if: ${{ matrix.os == 'ubuntu-latest' }}
@@ -27,6 +27,7 @@ jobs:
         run: |
           npm run apply-patches
           npm run prebuild -- --strip --all --arch arm64
+          npm run prebuild -- --strip --all --arch x64
       - if: ${{ matrix.os == 'windows-2019' }}
         name: Prebuild
         run: |
