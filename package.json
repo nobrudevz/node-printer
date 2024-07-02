@@ -28,7 +28,9 @@
   },
   "scripts": {
     "install": "prebuild-install || node-gyp rebuild",
-    "apply-patches": "patch-package",
+    "apply-patches-ia32": "patch-package --patch-dir patches/ia32",
+    "apply-patches-x64": "patch-package --patch-dir patches/x64",
+    "reverse-patches-ia32": "patch-package --reverse --patch-dir patches/ia32",
     "prebuild-all": "prebuild --all --force --strip --verbose --openssl_fips=X",
     "prebuild": "prebuild",
     "rebuild": "node-gyp rebuild"
