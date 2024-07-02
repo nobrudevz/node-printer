@@ -24,7 +24,7 @@
     "url": "git://github.com/grandchef/node-printer.git"
   },
   "engines": {
-    "node": ">= 18.0.0"
+    "node": ">= 12.0.0"
   },
   "scripts": {
     "install": "prebuild-install || node-gyp rebuild",
@@ -54,7 +54,7 @@
   "devDependencies": {
     "node-gyp": "^10.1.0",
     "prebuild": "^13.0.1",
-    "node-abi": "^3.63.0",
+    "node-abi": "3.65.0",
     "patch-package": "^8.0.0"
   },
   "dependencies": {
