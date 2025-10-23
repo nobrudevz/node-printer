@@ -1,8 +1,8 @@
 {
-  "name": "@grandchef/node-printer",
+  "name": "nobrudevz/node-printer",
   "description": "Node.js printer bindings",
   "version": "0.8.0",
-  "homepage": "https://github.com/grandchef/node-printer",
+  "homepage": "https://github.com/nobrudevz/node-printer",
   "keywords": [
     "native",
     "node",
@@ -21,7 +21,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/grandchef/node-printer.git"
+    "url": "git://github.com/nobrudevz/node-printer.git"
   },
   "engines": {
     "node": ">= 12.0.0"
