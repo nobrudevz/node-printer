@@ -23,14 +23,14 @@ Native bind printers on POSIX and Windows OS from Node.js, electron and node-web
 
 ### How to install:
 ```
-npm install @grandchef/node-printer
+npm install @nobrudevz/node-printer
 # or
-yarn add @grandchef/node-printer
+yarn add @nobrudevz/node-printer
 ```
 
 ### Step 2 —— rebuild by electron-builder to match node ABI
 
-See [examples](https://github.com/grandchef/node-printer/tree/main/examples)
+See [examples](https://github.com/nobrudevz/node-printer/tree/main/examples)
 
 ```bash
 npx electron-builder install-app-deps
@@ -54,11 +54,11 @@ node-pre-gyp build package --runtime=electron --target=`${electron_version}` --t
 ```
 
 ## Support
-- If you have a problem, find/create a new [Github issue](https://github.com/grandchef/node-printer/issues)
+- If you have a problem, find/create a new [Github issue](https://github.com/nobrudevz/node-printer/issues)
 
 ## Refer
 
-- [examples](https://github.com/grandchef/node-printer/tree/main/examples)
+- [examples](https://github.com/nobrudevz/node-printer/tree/main/examples)
 - [TimoKunze/node-printer](https://github.com/TimoKunze/node-printer)
 - [thiagoelg/node-printer](https://github.com/thiagoelg/node-printer)
 - [mapbox/node-sqlite3](https://github.com/mapbox/node-sqlite3)

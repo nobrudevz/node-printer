@@ -56,4 +56,4 @@ export interface JobDetails {
 
 export type JobStatus = 'PAUSED' | 'PRINTING' | 'PRINTED' | 'CANCELLED' | 'PENDING' | 'ABORTED';
 
-declare module '@grandchef/node-printer';
+declare module '@nobrudevz/node-printer';
